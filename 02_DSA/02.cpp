@@ -13,5 +13,5 @@ for(int i=0; i<5; i++){ // O(5) -> O(1)
 3. O(n) - Linear time complexity -> the time taken by the algorithm is directly proportional to the input size
 for(int i=0; i<n; i++){} // O(n)
 
-4. O(n^2) - Quadratic time complexity -> the time taken by the algorithm is proportional to the square of the input size
+4. O(n^2)  - Quadratic time complexity -> the time taken by the algorithm is proportional to the square of the input size
 */
