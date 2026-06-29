@@ -15,3 +15,21 @@ for(int i=0; i<n; i++){} // O(n)
 
 4. O(n^2)  - Quadratic time complexity -> the time taken by the algorithm is proportional to the square of the input size
 */
+/*
+Space Complexity - How much extra memory an algorithm uses as input size increases.
+
+1. O(1) - Constant Space
+   Uses a fixed amount of memory, regardless of input size.
+   Example:
+   int a = 10, b = 20;
+
+2. O(n) - Linear Space
+   Extra memory grows with the input size.
+   Example:
+   int arr[n];
+
+3. O(n^2) - Quadratic Space
+   Memory required grows as the square of the input size.
+   Example:
+   int matrix[n][n];
+*/
