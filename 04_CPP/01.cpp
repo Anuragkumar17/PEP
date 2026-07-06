@@ -66,6 +66,45 @@ void insertAtPosition(Node* &head, int pos, int val){
     temp->next=node;
 }
 
+void deleteAtEnd(Node* &head ){
+    if(head==NULL) return;
+    if(head->next==NULL){
+        delete head;
+        head=NULL;
+        return;
+    }
+    
+    Node* temp=head;
+    while(temp->next->next!=NULL){
+        temp=temp->next;
+    }
+    delete temp->next;
+    temp->next=NULL;
+}
+
+void deleteAtbegining(Node* &head){
+    if(head==NULL) return;
+    Node* temp = head;
+    head=head->next;
+    delete temp;
+}
+
+void  deleteAtPosition(Node* &head, int pos){
+    if(head==NULL) return;
+    if(head->next==NULL){
+        delete head;
+        head=NULL;
+        return;
+    }
+    Node* temp = head;
+    for(int i=0;i<pos-1;i++){
+        temp=temp->next;
+    }
+    Node* temp1 = temp->next;;
+    temp->next=temp->next->next;
+    delete temp1;
+}
+
 int main(){
     Node* head = NULL;
 
