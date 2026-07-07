@@ -44,8 +44,27 @@ void insertAtBegining(Node* &head, int val){
 
 }
 
-void insertAtPosition(Node* &head, int pos){
+void insertAtPosition(Node* &head, int pos, int data) {
+    Node* newNode = new Node(data);
 
+    if (pos == 1) {
+        newNode->next = head;
+        head = newNode;
+        return;
+    }
+
+    Node* temp = head;
+
+    for (int i = 1; i < pos - 1 && temp != NULL; i++) {
+        temp = temp->next;
+    }
+
+    if (temp == NULL) {
+        return;
+    }
+
+    newNode->next = temp->next;
+    temp->next = newNode;
 }
 
 void deleteAtEnd(Node* &head){
