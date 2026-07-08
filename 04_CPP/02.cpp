@@ -67,8 +67,21 @@ void insertAtPosition(Node* &head, int pos, int data) {
     temp->next = newNode;
 }
 
-void deleteAtEnd(Node* &head){
-
+void deleteAtEnd(Node* &head) {
+    if (head == NULL) {
+        return;
+    }
+    if (head->next == NULL) {
+        delete head;
+        head = NULL;
+        return;
+    }
+    Node* temp = head;
+    while (temp->next->next != NULL) {
+        temp = temp->next;
+    }
+    delete temp->next;
+    temp->next = NULL;
 }
 
 void deleteAtBegining(Node* head){
