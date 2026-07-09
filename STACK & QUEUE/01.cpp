@@ -46,8 +46,22 @@ class myStack{
     }
 };
 
-int main(){
+int main() {
     myStack s1(5);
-    s1.push(1);
 
+    s1.push(10);
+    s1.push(20);
+    s1.push(30);
+
+    cout << s1.peek() << endl;        // 30
+    cout << s1.stackSize() << endl;   // 3
+
+    s1.pop();
+
+    cout << s1.peek() << endl;        // 20
+    cout << s1.stackSize() << endl;   // 2
+
+    cout << s1.isEmpty() << endl;     // 0 (false)
+
+    return 0;
 }
