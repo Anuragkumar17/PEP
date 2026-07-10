@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//Stack using array
 class myStack{
     public:
     int *arr;
