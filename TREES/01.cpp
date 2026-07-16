@@ -29,7 +29,7 @@ int countLeafNodes(Node* root){
     if(root->left==NULL && root->right==NULL) return 1;
     int lf = countLeafNodes(root->left);
     int rf = countLeafNodes(root->right);   
-    return lf+rf;
+    return lf+rf ;
 }
 
 int main(){
